@@ -4,9 +4,8 @@
   "description": "### Bitcoin 블록체인 생태계",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "nodemon",
-    "test": "jest"
+    "test": "jest",
+    "build": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +22,8 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "ts-jest": "^29.1.0"
   }
 }
