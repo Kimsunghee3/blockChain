@@ -24,7 +24,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "moduleMapper": {
-      "^@(board | core)/(.+) $":"<rootDir>/src/$1/$2"
+      "^@(board|comment|core)/(.+) $":"<rootDir>/src/$1/$2"
     }
   },
   "dependencies": {
