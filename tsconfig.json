@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "./dist",
+        "target": "ES6",
+        "esModuleInterop": true,
+        "strict": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@user/*": ["@user/*"]
+        }
+    },
+    "include": [
+
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+}
