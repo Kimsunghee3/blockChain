@@ -7,7 +7,7 @@
         "strict": true,
         "baseUrl": "./src",
         "paths": {
-            "@user/*": ["@user/*"]
+            "@board/*": ["board/*"]
         }
     },
     "include": [
