@@ -3,3 +3,7 @@ export interface CommentWriteDTO {
     comment: string
     boardid: number
 }
+
+export interface CommentModel extends CommentWriteDTO{
+    id: number
+}

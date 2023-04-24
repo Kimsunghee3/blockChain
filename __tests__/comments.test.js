@@ -2,15 +2,17 @@ import CommentService from "comment/commentService"
 
 describe("comment service", () => {
     let commentService: CommentService
+    let commentRepository: commentRepository
 
     beforeEach(() => {
-        commentService = new commentService()
+        commentRepository = {
+            create: jest.fn().mockResolvedValue("ddd"),
+        }
+        commentService = new commentService(commentRepository)
     })
 
     it("commentservice 인스턴스 확인하기", () => {
-        console.log(commentService)
         expect(typeof commentService).toBe("object")
-        expect(commentService instanceof commentService).toBeTruthy()
     })
     //서비스 안에서 테스트할 함수
     describe('comment write', () => {
@@ -24,8 +26,9 @@ describe("comment service", () => {
                 comment: "안녕하세요",
                 boardid: 0,
             }
-
             const result = commentService.write(data)
+
+            expect(commentRepository.create).toBeCalled()
             expect(result).toBe({id:0, writer: "chop", comment: 'hello', boardid: 0})
         })
     })
